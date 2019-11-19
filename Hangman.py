@@ -35,18 +35,19 @@ def WordsByDifficulty(difficulty):
     if difficulty == 3:
         return random.choice(list3)
     
-def GameSetup():
+def GameSetup(hangedMan):
     print("\t\t\t_________\t\t\t")
     print("\t\t\t|\t|")
-    print("\t\t\t|")
-    print("\t\t\t|")
-    print("\t\t\t|")
-    print("\t\t\t|")
+    print("\t\t\t|\t{}".format(hangedMan[0]))
+    print("\t\t\t|      {}{}{}".format(hangedMan[2],hangedMan[1],hangedMan[3]))
+    print("\t\t\t|       {}{}".format(hangedMan[4],hangedMan[5]))
     print("\t\t\t|")
     print("\t\t\t|")
     print("\t\t   ==============")
 
-GameSetup()
+#hangedMan = list(" "*6)
+hangedMan = ["O","|","/","\\","/","\\"]
+GameSetup(hangedMan)
 gameWord = WordsByDifficulty(AskingForDiff())
 wordDashes = "_ "*len(gameWord)
 print(wordDashes)
