@@ -2,9 +2,12 @@
 #Below are some goals on what this program should do
 #
 # -ask the player for a difficulty
+# -have different genres (right now it will be based off animals)
 # -have a list of words based off difficulty and chooses at random
 # -draws a stick figure whenever a letter is guessed wrong
 # -state that there are no more vowels
+
+import random
 
 def AskingForDiff():
     print("Please select a number for the difficulty. Below is the rating.")
@@ -19,7 +22,18 @@ def AskingForDiff():
         if difficulty > 3:
             print("Try again.")
         else:
-            break
+            return difficulty
+
+def WordsByDifficulty(difficulty):
+    list1 = ["bear","cat","dog","lion","bird","mole"]
+    list2 = ["tiger","badger","crane","eagle","ferret","gerbil"]
+    list3 = ["elephant","giraffe","chipmunk","raccoon","ostrich","peacock"]
+    if difficulty == 1:
+        return random.choice(list1)
+    if difficulty == 2:
+        return random.choice(list2)
+    if difficulty == 3:
+        return random.choice(list3)
     
 
-AskingForDiff()
+print(WordsByDifficulty(AskingForDiff()))
