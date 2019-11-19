@@ -35,5 +35,18 @@ def WordsByDifficulty(difficulty):
     if difficulty == 3:
         return random.choice(list3)
     
+def GameSetup():
+    print("\t\t\t_________\t\t\t")
+    print("\t\t\t|\t|")
+    print("\t\t\t|")
+    print("\t\t\t|")
+    print("\t\t\t|")
+    print("\t\t\t|")
+    print("\t\t\t|")
+    print("\t\t\t|")
+    print("\t\t   ==============")
 
-print(WordsByDifficulty(AskingForDiff()))
+GameSetup()
+gameWord = WordsByDifficulty(AskingForDiff())
+wordDashes = "_ "*len(gameWord)
+print(wordDashes)
